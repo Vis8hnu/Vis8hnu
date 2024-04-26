@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color : burlywood">
+    <body style="table-layout: auto;">
+    <div class="container">
+        <h2>Register for the Tour</h2>
+        <style>
+            .container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #792222;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b62222;
+}
+
+#registrationMessage {
+    text-align: center;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    animation: open 1s ease-in-out;
+}
+
+@keyframes open {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form input,
+form button {
+    transition: all 0.10s ease-in-out;
+    transform: translateY(25px);
+    opacity: 1;
+}
+
+form input:focus,
+form button:focus {
+    outline: none;
+}
+
+form input,
+form button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+        </style>
+        <form id="registrationForm" onsubmit="registerTour(event)">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required><br><br>
+
+            <label for="place you like to visit">Place you like to visit:</label>
+            <input type="text" id="place you like to visit" name="place you like to visit" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="tourDate">Tour Date:</label>
+            <input type="date" id="tourDate" name="tourDate" required><br><br>
+
+            <label for="fromDate">From Date:</label>
+            <input type="fromdate" id="fromDate" name="fromDate" required><br><br>
+
+            <label for="endDate">End Date:</label>
+            <input type="enddate" id="endDate" name="endDate" required><br><br>
+            
+            <label for="number">Mobile Number:</label>
+            <input type="number" id="number" name="number" required><br><br>
+
+            <button type="submit">Register</button>
+        </form>
+        <p id="registrationMessage"></p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
